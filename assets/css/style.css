@@ -7,7 +7,7 @@ body{
 }
 .container{
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     margin: 20px 150px;
 }
 .level1{
@@ -30,18 +30,20 @@ a{
     display: flex;
     flex-direction: row;
 }
-.btn1{
-    background-color:rgb(171, 27, 207);
-    color: white;
+.btn1, 
+.btn2, 
+.level6-btn1, 
+.level6-btn2{
     border-radius: 15px;
     height: 2rem;
     border: 1px solid white;
 }
+.btn1{
+    background-color:rgb(171, 27, 207);
+    color: white;
+}
 .btn2{
     background-color: white;
-    border-radius: 15px;
-    height: 2rem;
-    border: 1px solid white;
 }
 .select1{
     font-size: 50px;
@@ -79,7 +81,6 @@ a{
 .select3-4{
     padding-top: 15px;
     text-indent: 20px;
-    /* word-spacing: 10px; */
 }
 .df{
     background-color: violet;
@@ -96,7 +97,7 @@ a{
     background-color: rgb(121, 18, 238);
     border-radius: 20px;
     opacity: 0.9;
-    height: 300px;
+    height: 320px;
 }
 .level5-1{
     font-size: 35px;
@@ -113,28 +114,23 @@ a{
 }
 .level6{
     display: flex ;
+    flex-flow: row wrap;
     justify-content: space-between;
 }
 .level6-btn1{
-    border-radius: 20px;
     background-color: violet;
-    height: 2rem;
-    width: auto;
-    border: 1px solid white;
 }
 .level6-btn2{
-    border-radius: 20px;
-    height: 2rem;
     background-color: white;
-    width: auto;
-    border: 1px solid white;
 }
 .level6-2{
     justify-content: space-between;
 }
 footer{
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
+    flex-flow: row wrap;
+    height: 300px;
     justify-content: space-between;
     padding: 40px 0px 40px 0px;
 
@@ -150,8 +146,10 @@ li{
 .qwe{
     display: flex;
 }
-.qw{
-    background-color:  #68C9BA;
+.qw,
+.qw1,
+.qw2,
+.qw3 {
     position: relative;
     opacity: 0.8;
     border-radius: 20px;
@@ -159,36 +157,18 @@ li{
     height: 216px;
     z-index: -2;
     border-top-left-radius: 140px 450px;
+}
+.qw{
+    background-color:  #68C9BA;
 }
 .qw1{
     background-color: #9C69E2;
-    position: relative;
-    opacity: 0.8;
-    border-radius: 20px;
-    width: 320px;
-    height: 216px;
-    z-index: -2;
-    border-top-left-radius: 140px 450px;
 }
 .qw2{
     background-color: violet;
-    position: relative;
-    opacity: 0.8;
-    border-radius: 20px;
-    width: 320px;
-    height: 216px;
-    z-index: -2;
-    border-top-left-radius: 140px 450px;
 }
 .qw3{
     background-color: violet;
-    position: relative;
-    opacity: 0.8;
-    border-radius: 20px;
-    width: 320px;
-    height: 216px;
-    z-index: -2;
-    border-top-left-radius: 140px 450px;
 }
 p.qe{
     justify-content: center;
@@ -207,8 +187,9 @@ p.qe{
 }
 .flex{
     display: flex;
+    flex-flow: row wrap;
     gap: 20px;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .hh{
     padding: 20px 0px;
@@ -218,7 +199,13 @@ p.qe{
 }
 .level5-2{
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
+    height: 200px;
+    gap: .5rem;
+    overflow-y: scroll;
     padding: 0px 40px;
     justify-content: space-around;
+}
+.ll{
+    width: 400px;
 }
